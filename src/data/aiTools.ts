@@ -128,6 +128,12 @@ export const defaultCategories: Category[] = [
         url: "https://microsoft.github.io/autogen",
         quotaInfo: "微軟開源專案",
       },
+      {
+        id: "lobechat",
+        title: "LobeChat",
+        url: "https://lobechat.com",
+        quotaInfo: "開源平台，支援雲端或自架",
+      },
     ],
   },
   {
@@ -266,6 +272,12 @@ export const defaultCategories: Category[] = [
     color: "bg-zinc-500", // 鋅灰色 = 擴展、插件、增強
     bookmarks: [
       {
+        id: "opencode-ai",
+        title: "OpenCode",
+        url: "https://opencode.ai",
+        quotaInfo: "The open source AI coding agent",
+      },
+      {
         id: "github-copilot",
         title: "GitHub Copilot",
         url: "https://github.com/features/copilot",
@@ -338,6 +350,12 @@ export const defaultCategories: Category[] = [
         title: "Figma AI",
         url: "https://figma.com",
         quotaInfo: "免費版有功能限制",
+      },
+      {
+        id: "remini-ai",
+        title: "Remini",
+        url: "https://remini.ai",
+        quotaInfo: "免費版每日有使用限制",
       },
     ],
   },
