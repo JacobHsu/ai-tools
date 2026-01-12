@@ -93,6 +93,19 @@ export const defaultCategories: Category[] = [
     color: "bg-emerald-600", // 翠綠色 = 智能代理、自動執行
     bookmarks: [
       {
+        id: "anygen",
+        title: "AnyGen",
+        url: "https://www.anygen.io",
+        quotaInfo: "每日可獲取新積分: 200點",
+        appUrl: "https://www.anygen.io/share/3SzLK5N3thOa0PfO3HGtYl?share_id=7593315276813242078",
+      },
+      {
+        id: "manus",
+        title: "Manus",
+        url: "https://manus.im",
+        quotaInfo: "每日可獲取新積分: 300點",
+      },
+      {
         id: "langchain",
         title: "LangChain",
         url: "https://langchain.com",
@@ -134,6 +147,7 @@ export const defaultCategories: Category[] = [
         url: "https://lobechat.com",
         quotaInfo: "開源平台，支援雲端或自架",
       },
+
     ],
   },
   {
@@ -143,15 +157,16 @@ export const defaultCategories: Category[] = [
     bookmarks: [
       {
         id: "lovable-dev",
-        title: "Lovable.dev",
+        title: "Lovable",
         url: "https://lovable.dev",
-        quotaInfo: "每月免費 5 個專案",
+        quotaInfo: "5 free daily credits",
+        appUrl: "https://crypto-tv-signal.lovable.app",
       },
       {
         id: "replit",
         title: "Replit",
         url: "https://replit.com",
-        quotaInfo: "免費版 500MB 儲存空間",
+        quotaInfo: "Publish 1 app",
       },
       {
         id: "v0-dev",
