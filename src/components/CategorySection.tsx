@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { useDroppable } from '@dnd-kit/core';
 import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable';
 import { Category } from '../types';
@@ -22,9 +22,10 @@ export const CategorySection: React.FC<CategorySectionProps> = ({ category, onAd
     },
   });
 
-  const handleEditBookmark = (bookmarkId: string) => {
+  // 使用 useCallback 穩定回調函數
+  const handleEditBookmark = useCallback((bookmarkId: string) => {
     setEditingBookmark(bookmarkId);
-  };
+  }, []);
 
   const editingBookmarkData = editingBookmark 
     ? category.bookmarks.find(b => b.id === editingBookmark)
@@ -74,7 +75,7 @@ export const CategorySection: React.FC<CategorySectionProps> = ({ category, onAd
                 key={bookmark.id}
                 bookmark={bookmark}
                 categoryId={category.id}
-                onEdit={() => handleEditBookmark(bookmark.id)}
+                onEdit={handleEditBookmark}
               />
             ))}
           </SortableContext>
@@ -82,13 +83,13 @@ export const CategorySection: React.FC<CategorySectionProps> = ({ category, onAd
       </div>
 
       {/* Edit Modal */}
-      {editingBookmark && editingBookmarkData && (
+      {editingBookmark && editingBookmarkData ? (
         <EditBookmarkModal
           bookmark={editingBookmarkData}
           categoryId={category.id}
           onClose={() => setEditingBookmark(null)}
         />
-      )}
+      ) : null}
     </>
   );
 };
