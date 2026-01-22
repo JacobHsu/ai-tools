@@ -172,7 +172,8 @@ export const defaultCategories: Category[] = [
         id: "v0-dev",
         title: "v0.dev",
         url: "https://v0.dev",
-        quotaInfo: "每月免費 200 次生成",
+        quotaInfo: "$5 of usage credit per month",
+        appUrl: "https://v0-crypto-currency-calendar.vercel.app",
       },
       {
         id: "glide",
