@@ -60,6 +60,12 @@ export const defaultCategories: Category[] = [
         url: "https://felo.ai",
         quotaInfo: "每日贈送 200 點數",
       },
+      {
+        id: "openrouter",
+        title: "OpenRouter",
+        url: "https://openrouter.ai",
+        quotaInfo: "聚合多種 AI 模型，包含免費模型",
+      },
     ],
   },
   {
@@ -93,6 +99,12 @@ export const defaultCategories: Category[] = [
     color: "bg-emerald-600", // 翠綠色 = 智能代理、自動執行
     bookmarks: [
       {
+        id: "openclaw",
+        title: "OpenClaw",
+        url: "https://openclaw.ai",
+        quotaInfo: "開源個人 AI 助理，支援多種通訊軟體",
+      },
+      {
         id: "anygen",
         title: "AnyGen",
         url: "https://www.anygen.io",
@@ -111,12 +123,7 @@ export const defaultCategories: Category[] = [
         url: "https://langchain.com",
         quotaInfo: "開源框架免費使用",
       },
-      {
-        id: "firecrawl",
-        title: "Firecrawl",
-        url: "https://firecrawl.dev/agent",
-        quotaInfo: "5 free daily runs",
-      },
+
       {
         id: "dify-ai",
         title: "Dify AI",
@@ -147,6 +154,7 @@ export const defaultCategories: Category[] = [
         url: "https://lobechat.com",
         quotaInfo: "開源平台，支援雲端或自架",
       },
+
 
     ],
   },
@@ -339,6 +347,25 @@ export const defaultCategories: Category[] = [
     ],
   },
   {
+    id: "web-data",
+    title: "Web Data",
+    color: "bg-cyan-600", // 青色 = 數據、網絡、流動
+    bookmarks: [
+      {
+        id: "firecrawl",
+        title: "Firecrawl",
+        url: "https://firecrawl.dev/agent",
+        quotaInfo: "5 free daily runs",
+      },
+      {
+        id: "capalyze",
+        title: "Capalyze",
+        url: "https://www.capalyze.ai",
+        quotaInfo: "AI 驅動的自動化資料收集與分析",
+      },
+    ],
+  },
+  {
     id: "ai-design",
     title: "Design & Creative",
     color: "bg-rose-500", // 玫瑰色 = 創意、藝術、美感
@@ -398,6 +425,13 @@ export const defaultCategories: Category[] = [
         url: "https://wayin.ai",
         quotaInfo: "每天免費工具點數: 30",
       },
+      {
+        id: "zread",
+        title: "Zread",
+        url: "https://zread.ai",
+        quotaInfo: "AI 輔助閱讀與分析 GitHub 專案",
+      },
+
     ],
   },
 ];
