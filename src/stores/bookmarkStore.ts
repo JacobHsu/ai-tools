@@ -7,21 +7,26 @@ const migrateBookmarks = (categories: Category[]): Category[] => {
   return categories.map(category => {
     const defaultCategory = defaultCategories.find(cat => cat.id === category.id);
 
-    const updatedBookmarks = category.bookmarks.map(bookmark => {
-      const defaultBookmark = defaultCategory?.bookmarks.find(bm => bm.id === bookmark.id);
-      return {
-        ...bookmark,
-        quotaInfo: bookmark.quotaInfo || defaultBookmark?.quotaInfo,
-        appUrl: bookmark.appUrl || defaultBookmark?.appUrl
-      };
+    const savedMap = new Map(category.bookmarks.map(bm => [bm.id, bm]));
+
+    const mergedByDefault = (defaultCategory?.bookmarks ?? []).map(defaultBm => {
+      const saved = savedMap.get(defaultBm.id);
+      if (saved) {
+        return {
+          ...saved,
+          quotaInfo: saved.quotaInfo || defaultBm.quotaInfo,
+          appUrl: saved.appUrl || defaultBm.appUrl
+        };
+      }
+      return defaultBm;
     });
 
-    const existingIds = new Set(category.bookmarks.map(bm => bm.id));
-    const newBookmarks = defaultCategory?.bookmarks.filter(bm => !existingIds.has(bm.id)) ?? [];
+    const defaultIds = new Set((defaultCategory?.bookmarks ?? []).map(bm => bm.id));
+    const userAdded = category.bookmarks.filter(bm => !defaultIds.has(bm.id));
 
     return {
       ...category,
-      bookmarks: [...updatedBookmarks, ...newBookmarks]
+      bookmarks: [...mergedByDefault, ...userAdded]
     };
   });
 };
