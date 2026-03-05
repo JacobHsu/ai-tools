@@ -3,24 +3,27 @@ import { persist } from 'zustand/middleware';
 import { Category, Bookmark } from '../types';
 import { defaultCategories } from '../data/aiTools';
 
-// 数据迁移函数：为旧书签添加 quotaInfo 和 appUrl
 const migrateBookmarks = (categories: Category[]): Category[] => {
-  return categories.map(category => ({
-    ...category,
-    bookmarks: category.bookmarks.map(bookmark => {
-      // 从 defaultCategories 中查找对应的书签数据
-      const defaultCategory = defaultCategories.find(cat => cat.id === category.id);
+  return categories.map(category => {
+    const defaultCategory = defaultCategories.find(cat => cat.id === category.id);
+
+    const updatedBookmarks = category.bookmarks.map(bookmark => {
       const defaultBookmark = defaultCategory?.bookmarks.find(bm => bm.id === bookmark.id);
-      
       return {
         ...bookmark,
-        // 如果书签已经有 quotaInfo，保持不变，否则从默认数据中获取
         quotaInfo: bookmark.quotaInfo || defaultBookmark?.quotaInfo,
-        // 如果书签已经有 appUrl，保持不变，否则从默认数据中获取
         appUrl: bookmark.appUrl || defaultBookmark?.appUrl
       };
-    })
-  }));
+    });
+
+    const existingIds = new Set(category.bookmarks.map(bm => bm.id));
+    const newBookmarks = defaultCategory?.bookmarks.filter(bm => !existingIds.has(bm.id)) ?? [];
+
+    return {
+      ...category,
+      bookmarks: [...updatedBookmarks, ...newBookmarks]
+    };
+  });
 };
 
 interface BookmarkStore {
@@ -107,7 +110,6 @@ export const useBookmarkStore = create<BookmarkStore>()(
 
           if (activeIndex === -1 || overIndex === -1) return state;
 
-          // Move the bookmark
           const [movedBookmark] = bookmarks.splice(activeIndex, 1);
           bookmarks.splice(overIndex, 0, movedBookmark);
 
@@ -166,10 +168,9 @@ export const useBookmarkStore = create<BookmarkStore>()(
       }
     }),
     {
-      name: 'papaly-bookmarks-v3', // localStorage key - 更新版本以重新加载数据
+      name: 'papaly-bookmarks-v3',
       onRehydrateStorage: () => (state) => {
         if (state) {
-          // 迁移旧数据，添加缺失的 quotaInfo 和 appUrl
           state.categories = migrateBookmarks(state.categories);
         }
       },
