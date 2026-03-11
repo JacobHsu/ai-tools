@@ -57,8 +57,9 @@ export const BookmarkCard = memo<BookmarkCardProps>(({ bookmark, categoryId, onE
     [bookmark.favicon, bookmark.url]
   );
 
-  const quotaInfo = useMemo(() => 
+  const quotaInfo = useMemo(() =>
     getQuotaInfo(bookmark),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [bookmark.quotaInfo]
   );
 
