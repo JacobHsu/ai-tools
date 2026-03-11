@@ -395,10 +395,22 @@ export const defaultCategories: Category[] = [
         quotaInfo: "免費版有功能限制",
       },
       {
+        id: "freepik",
+        title: "Freepik",
+        url: "https://zh.freepik.com/圖像",
+        quotaInfo: "免費版每日下載 10 個素材",
+      },
+      {
         id: "remini-ai",
         title: "Remini",
         url: "https://remini.ai",
         quotaInfo: "免費版每日有使用限制",
+      },
+      {
+        id: "remove-bg",
+        title: "remove.bg",
+        url: "https://www.remove.bg/zh",
+        quotaInfo: "免費版無限低解析度預覽",
       },
     ],
   },
