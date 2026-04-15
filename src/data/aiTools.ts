@@ -99,6 +99,12 @@ export const defaultCategories: Category[] = [
     color: "bg-emerald-600", // 翠綠色 = 智能代理、自動執行
     bookmarks: [
       {
+        id: "hermes",
+        title: "Hermes Agent",
+        url: "https://hermes-agent.nousresearch.com/",
+        quotaInfo: "開源的自主 AI Agent 框架",
+      },
+      {
         id: "openclaw",
         title: "OpenClaw",
         url: "https://openclaw.ai",
@@ -265,6 +271,12 @@ export const defaultCategories: Category[] = [
         quotaInfo: "Generous weekly rate limits",
       },
       {
+        id: "codex",
+        title: "Codex",
+        url: "https://openai.com/zh-Hant/codex/",
+        quotaInfo: "Free / Go $8 / Plus $20",
+      },
+      {
         id: "kiro-dev",
         title: "Kiro.dev",
         url: "https://kiro.dev",
@@ -356,6 +368,24 @@ export const defaultCategories: Category[] = [
         title: "Firecrawl",
         url: "https://firecrawl.dev/agent",
         quotaInfo: "5 free daily runs",
+      },
+      {
+        id: "aptify",
+        title: "Aptify",
+        url: "https://apify.com/",
+        quotaInfo: "$5 to spend in Apify Store",
+      },
+      {
+        id: "browseruse",
+        title: "Browser Use",
+        url: "https://browser-use.com/",
+        quotaInfo: "3 concurrent agents & browsers",
+      },
+      {
+        id: "browseai",
+        title: "Browse AI",
+        url: "https://www.browse.ai/",
+        quotaInfo: "50 Credits per month",
       },
       {
         id: "capalyze",
