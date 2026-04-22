@@ -356,6 +356,18 @@ export const defaultCategories: Category[] = [
         url: "https://make.com",
         quotaInfo: "1,000 credits/month",
       },
+      {
+        id: "n8n",
+        title: "n8n",
+        url: "https://n8n.io",
+        quotaInfo: "開源工作流自動化，支援自架",
+      },
+      {
+        id: "langflow",
+        title: "Langflow",
+        url: "https://langflow.org",
+        quotaInfo: "拖放方式構建 Agent 工作流，開源免費",
+      },
     ],
   },
   {
@@ -472,6 +484,12 @@ export const defaultCategories: Category[] = [
         title: "Zread",
         url: "https://zread.ai",
         quotaInfo: "AI 輔助閱讀與分析 GitHub 專案",
+      },
+      {
+        id: "canirun-ai",
+        title: "Can I Run AI",
+        url: "https://canirun.ai",
+        quotaInfo: "查詢硬體是否支援本地執行 AI 模型",
       },
 
     ],
