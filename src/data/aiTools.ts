@@ -91,6 +91,12 @@ export const defaultCategories: Category[] = [
         url: "https://fello.ai",
         quotaInfo: "AI 驅動的智能瀏覽器",
       },
+      {
+        id: "anchor-browser",
+        title: "Anchor Browser",
+        url: "https://anchorbrowser.io",
+        quotaInfo: "$5 free credits/month",
+      },
     ],
   },
   {
@@ -367,6 +373,12 @@ export const defaultCategories: Category[] = [
         title: "Langflow",
         url: "https://langflow.org",
         quotaInfo: "拖放方式構建 Agent 工作流，開源免費",
+      },
+      {
+        id: "trigger-dev",
+        title: "Trigger.dev",
+        url: "https://trigger.dev",
+        quotaInfo: "$5 free monthly usage",
       },
     ],
   },
