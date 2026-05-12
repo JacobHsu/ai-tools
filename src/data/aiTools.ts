@@ -417,6 +417,12 @@ export const defaultCategories: Category[] = [
         url: "https://www.capalyze.ai",
         quotaInfo: "AI 驅動的自動化資料收集與分析",
       },
+      {
+        id: "xcrawl",
+        title: "xCrawl",
+        url: "https://xcrawl.dev",
+        quotaInfo: "1000 credits (one-time)",
+      },
     ],
   },
   {
