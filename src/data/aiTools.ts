@@ -100,6 +100,25 @@ export const defaultCategories: Category[] = [
     ],
   },
   {
+    id: "ai-gateway",
+    title: "AI Gateway",
+    color: "bg-sky-600", // 天藍色 = 連接、整合、流量管理
+    bookmarks: [
+      {
+        id: "portkey-ai",
+        title: "Portkey",
+        url: "https://portkey.ai",
+        quotaInfo: "10k recorded logs per month",
+      },
+      {
+        id: "helicone-ai",
+        title: "Helicone",
+        url: "https://www.helicone.ai",
+        quotaInfo: "10,000 free requests",
+      },
+    ],
+  },
+  {
     id: "ai-agents",
     title: "AI Agents",
     color: "bg-emerald-600", // 翠綠色 = 智能代理、自動執行
