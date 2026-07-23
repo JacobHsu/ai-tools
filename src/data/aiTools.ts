@@ -119,6 +119,31 @@ export const defaultCategories: Category[] = [
     ],
   },
   {
+    id: "ai-observability",
+    title: "Observability",
+    color: "bg-fuchsia-600", // 紫紅色 = 追蹤、洞察、可觀測性
+    bookmarks: [
+      {
+        id: "langfuse",
+        title: "LangFuse",
+        url: "https://langfuse.com",
+        quotaInfo: "50k units/month free (Hobby plan)",
+      },
+      {
+        id: "langsmith",
+        title: "LangSmith",
+        url: "https://www.langchain.com/langsmith",
+        quotaInfo: "5k traces/month free (Developer plan)",
+      },
+      {
+        id: "arize-phoenix",
+        title: "Arize Phoenix",
+        url: "https://arize.com/docs/phoenix",
+        quotaInfo: "開源自架免費；雲端版 25k spans/月免費",
+      },
+    ],
+  },
+  {
     id: "ai-agents",
     title: "AI Agents",
     color: "bg-emerald-600", // 翠綠色 = 智能代理、自動執行
@@ -529,6 +554,19 @@ export const defaultCategories: Category[] = [
         quotaInfo: "查詢硬體是否支援本地執行 AI 模型",
       },
 
+    ],
+  },
+  {
+    id: "ai-testing",
+    title: "Testing",
+    color: "bg-lime-600", // 萊姆綠 = 檢驗、除錯、精準
+    bookmarks: [
+      {
+        id: "replay-io",
+        title: "Replay.io",
+        url: "https://www.replay.io",
+        quotaInfo: "免費版每月 25 credits",
+      },
     ],
   },
 ];
