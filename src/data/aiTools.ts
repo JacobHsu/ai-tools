@@ -516,6 +516,12 @@ export const defaultCategories: Category[] = [
         url: "https://www.remove.bg/zh",
         quotaInfo: "免費版無限低解析度預覽",
       },
+      {
+        id: "voai",
+        title: "VoAI 絕好聲創",
+        url: "https://www.voai.ai",
+        quotaInfo: "台灣口音 AI 語音配音、聲音克隆、AI 虛擬人",
+      },
     ],
   },
   {
