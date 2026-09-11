@@ -80,10 +80,10 @@ export const defaultCategories: Category[] = [
         quotaInfo: "Perplexity 推出的 AI 瀏覽器",
       },
       {
-        id: "atlas-browser",
-        title: "Atlas Browser",
-        url: "https://chatgpt.com/zh-Hant/atlas/",
-        quotaInfo: "OpenAI 推出的 AI 瀏覽器",
+        id: "chatgpt-browser",
+        title: "ChatGPT Chrome Extension",
+        url: "https://chromewebstore.google.com/detail/chatgpt/hehggadaopoacecdllhhajmbjkdcmajg",
+        quotaInfo: "ChatGPT - Chrome Web Store",
       },
       {
         id: "fello-browser",
@@ -566,6 +566,19 @@ export const defaultCategories: Category[] = [
         title: "Replay.io",
         url: "https://www.replay.io",
         quotaInfo: "免費版每月 25 credits",
+      },
+    ],
+  },
+  {
+    id: "skills",
+    title: "Skills",
+    color: "bg-purple-600", // 紫色 = 技能、擴展、知識庫
+    bookmarks: [
+      {
+        id: "claude-code-skills",
+        title: "Claude Code Skills",
+        url: "https://github.com/daymade/claude-code-skills",
+        quotaInfo: "開源 Claude Code skills marketplace",
       },
     ],
   },
